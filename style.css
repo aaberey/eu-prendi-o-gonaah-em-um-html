@@ -8,40 +8,41 @@
 .displayname {
   color: white;
   display: block;
-  font-family: 'ggSans', Arial, sans-serif; /* Aplica a fonte personalizada */
+  font-family: 'ggSans', Arial, sans-serif;
   font-weight: bolder;
-  font-size: 20px;
+  font-size: 1vw; /* Font-size em porcentagem */
 }
 
 .text {
   color: white;
-  display: block;
-  font-family: 'ggSans', Arial, sans-serif; /* Aplica a fonte personalizada */
-  font-size: 16px;
+  display: flex;
+  font-family: 'ggSans', Arial, sans-serif;
+  font-size: 1vw; /* Font-size em porcentagem */
 }
-
 
 body {
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 20vh;
   background-color: #0f0f11;
   margin: 0;
 }
 
 .player-container {
-  background-color: #232528;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 90vw;
-  max-width: 600px;
-  padding: 0;
+  margin-top: 50%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
+
+  background-color: #232528;
+  border-radius: 10px;
+  box-shadow: 0 4vw 10vw rgba(0, 0, 0, 0.1);
+  width: 25vw;
+  max-width: 50vw; /* Mantém a largura em porcentagem para responsividade */
+  padding: 20;
 }
 
 .banner-container {
@@ -56,43 +57,37 @@ body {
 }
 
 .avatar {
-  box-shadow: 0 0 0 5px #232528, 0 0 0 10px #232528; /* Ajusta contorno e círculo maior */
-  width: 130px;
-  height: 130px; /* Assegura que a altura também seja igual à largura */
-  border-radius: 50%; /* Faz o avatar ser circular */
+  box-shadow: 0 0 0 .8vw #232528, 0 0 0 .8vw #232528;
+  width: 7vw; /* Responsividade para a largura do avatar */
+  border-radius: 50%;
   position: absolute;
-  left: 20px; /* Mantém o avatar à esquerda */
-  transform: translateY(50%); /* Desce o avatar para alinhar com a parte inferior do banner */
-  bottom: -5px; /* Ajusta para encostar no banner sem gap */
-  z-index: 1; /* Coloca o avatar acima da camada do banner */
-  
-  /* Criação de um círculo de fundo maior */
-  background-color: #232528; /* Mesmo tom que o contorno para evitar gaps */
+  left: 1.5vw; /* Responsividade na posição */
+  transform: translateY(50%);
+  bottom: -.3vw;
+  z-index: 1;
+  background-color: #232528;
 }
 
 .avatar::before {
   content: "";
   position: absolute;
-  top: -5px; /* Ajusta o tamanho do círculo maior */
-  left: -5px;
-  width: calc(100% + 10px); /* Faz o círculo maior do que o avatar */
-  height: calc(100% + 10px);
-  border-radius: 50%; /* Mantém a forma circular */
-  background-color: #232528; /* Cor do círculo de fundo */
-  z-index: -1; /* Garante que o círculo fique atrás do avatar */
+  top: -2vw;
+  left: -2vw;
+  width: calc(100% + 4vw);
+  height: calc(100% + 4vw);
+  border-radius: 50%;
+  background-color: #232528;
+  z-index: -1;
 }
-
 
 .text-container {
-  margin-top: 11%; /* Ajustar a margem para descer os textos, se necessário */
-  text-align: left;
-  width: 100%;
-  padding: 20px;
+  margin-top: 5%;
+  width: 120%;
+  padding: 4vw; /* Padding em porcentagem */
 }
 
-
 .marginleft {
-  margin-left: 20px;;
+  margin-left: 5vw; /* Margin-left em porcentagem */
 }
 
 .box {
@@ -101,6 +96,6 @@ body {
 }
 
 .emoji {
-  height: 20px;
-  margin-right: 5px;
+  height: 1.5vw; /* Tamanho do emoji responsivo */
+  margin-right: 1vw;
 }
